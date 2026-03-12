@@ -1,8 +1,9 @@
 const decreaseCounterBut = document.querySelector("#decrease-counter");
-const increseCounterBut = document.querySelector("#increase-counter");
+const increaseCounterBut = document.querySelector("#increase-counter");
 const counterDisplay = document.querySelector(".counter-display");
 
 let count = 0;
+decreaseCounterBut.disabled = true;
 
 decreaseCounterBut.addEventListener("click", () => {
   count--;
@@ -13,9 +14,8 @@ decreaseCounterBut.addEventListener("click", () => {
   }
 });
 
-increseCounterBut.addEventListener("click", () => {
+increaseCounterBut.addEventListener("click", () => {
   decreaseCounterBut.disabled = false;
-
   count++;
   counterDisplay.textContent = count;
 });
